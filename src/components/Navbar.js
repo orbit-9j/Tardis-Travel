@@ -6,13 +6,13 @@ function Navbar({ cartItems }) {
     <header>
       <nav className="menu">
         <div className="floatLeft">
-          <Link to="/Tardis-Travel">
+          <Link to="/">
             <strong className="logo">TARDIS TRAVEL</strong>
           </Link>
         </div>
         <div className="floatRight">
-          <Link to="/Tardis-Travel/products">Products</Link>
-          <Link to="/Tardis-Travel/cart">
+          <Link to="/products">Products</Link>
+          <Link to="/cart">
             Cart<span className="cartNumber">{cartItems.length}</span>
           </Link>
         </div>
