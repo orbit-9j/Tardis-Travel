@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Tardis-Travel/static/css/main.f49aefa4.css",
-    "main.js": "/Tardis-Travel/static/js/main.940bfbf5.js",
+    "main.js": "/Tardis-Travel/static/js/main.5474bca0.js",
     "static/media/noise.png": "/Tardis-Travel/static/media/noise.c46cab5b075a79a8e088.png",
     "index.html": "/Tardis-Travel/index.html",
     "main.f49aefa4.css.map": "/Tardis-Travel/static/css/main.f49aefa4.css.map",
-    "main.940bfbf5.js.map": "/Tardis-Travel/static/js/main.940bfbf5.js.map"
+    "main.5474bca0.js.map": "/Tardis-Travel/static/js/main.5474bca0.js.map"
   },
   "entrypoints": [
     "static/css/main.f49aefa4.css",
-    "static/js/main.940bfbf5.js"
+    "static/js/main.5474bca0.js"
   ]
 }
