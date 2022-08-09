@@ -1,0 +1,32 @@
+$light: #fff8e6;
+$darkerText: darken($light, 5%);
+$dark: #0c102d;
+$accentDark: #1c2987;
+$accentLight: #ffbc5f;
+
+/* noise texture generator: */
+/* https://www.cssmatic.com/noise-texture */
+/* opacity 26 */
+/* density 43 */
+
+$xLargeSpacing: 6.25rem;
+$largeSpacing: 3.125rem;
+$mediumSpacing: 1.25rem;
+$smallSpacing: 0.625rem;
+$xSmallSpacing: 0.3125rem;
+
+$headingFont: 3.125rem;
+$subheadingFont: 1.875rem;
+$mainFont: 1.25rem;
+$smallFont: 1rem;
+
+$mobileHeadingFont: 1.875rem;
+$mobileSubheadingFont: 1.25rem;
+$mobileMainFont: 1rem;
+$mobileSmallFont: 0.875rem;
+
+$transitionTime: 200ms;
+
+$borderWidth: 0.125rem;
+
+$gridGap: 1.875rem;

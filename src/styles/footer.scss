@@ -1,0 +1,25 @@
+footer {
+  @include blue;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: $gridGap;
+  @include breakpoint-down(small) {
+    grid-template-columns: 1fr;
+  }
+  p {
+    font-size: $smallFont;
+    @include breakpoint-down(small) {
+      font-size: $mobileSmallFont;
+    }
+  }
+  h3 {
+    color: $accentLight;
+    font-size: $subheadingFont;
+    margin-bottom: $smallSpacing;
+    @include breakpoint-down(small) {
+      font-size: $mobileSubheadingFont;
+      margin-bottom: 0;
+    }
+  }
+}

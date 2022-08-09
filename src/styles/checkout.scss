@@ -1,0 +1,48 @@
+.checkout {
+  @include dark-block;
+  p {
+    margin-bottom: $smallSpacing;
+  }
+  h1 {
+    margin-bottom: $smallSpacing;
+  }
+  .form {
+    max-width: 43.75rem;
+    margin: auto;
+
+    .formInput {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: $gridGap;
+      margin-bottom: $smallSpacing;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+    }
+    input {
+      font-size: $mainFont;
+      padding: 0.4375rem;
+      background-color: $accentLight;
+      width: 100%;
+      color: $dark;
+
+      &::placeholder {
+        color: $accentDark;
+      }
+    }
+    span {
+      color: red;
+      display: none;
+      font-size: $smallFont;
+    }
+    input:invalid[focused="true"] {
+      border: $borderWidth solid red;
+    }
+
+    input:invalid[focused="true"] ~ span {
+      display: block;
+    }
+  }
+}

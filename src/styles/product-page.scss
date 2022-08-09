@@ -1,0 +1,112 @@
+.productPage {
+  @include dark-block;
+
+  h1 {
+    @include breakpoint-down(small) {
+      margin-bottom: $mediumSpacing;
+    }
+  }
+
+  .filterContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $gridGap;
+    max-width: 25rem;
+    margin: auto;
+    margin-bottom: $mediumSpacing;
+
+    .filterHeading {
+      color: $accentLight;
+      font-size: $mainFont;
+      text-align: right;
+      margin: auto;
+    }
+
+    select {
+      @include blue;
+      padding: $xSmallSpacing;
+      font-size: $mainFont;
+      border: $borderWidth solid $accentLight;
+      @include breakpoint-down(small) {
+        font-size: $mobileMainFont;
+        max-width: 9.375rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.card-collection {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a:link,
+  a:visited {
+    color: $light;
+  }
+
+  a:hover,
+  a:active {
+    color: $dark;
+  }
+
+  .items {
+    display: inline-block;
+    @include cardParams;
+    margin: $smallSpacing;
+    transition: all $transitionTime ease-in-out;
+    @include dimmerCard;
+    width: 15.625rem;
+    @include breakpoint-down(medium) {
+      width: 12.5rem;
+    }
+
+    a {
+      color: $light;
+    }
+    .price,
+    h3 {
+      color: $accentLight;
+    }
+
+    h3 {
+      font-size: $mainFont;
+      @include breakpoint-down(small) {
+        padding: 0;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      color: $dark;
+      background-color: $accentLight;
+      p,
+      h3,
+      .price {
+        color: $dark;
+      }
+    }
+
+    .productDesc {
+      font-size: $smallFont;
+      @include breakpoint-down(small) {
+        font-size: $mobileSmallFont;
+      }
+    }
+
+    .productImage {
+      border-radius: 1.25rem;
+      max-height: 15.625rem;
+      max-width: 15.625rem;
+      object-fit: contain;
+      margin: auto;
+      @include breakpoint-down(medium) {
+        max-height: 9.375rem;
+        max-width: 9.375rem;
+      }
+    }
+  }
+}

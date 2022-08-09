@@ -1,0 +1,36 @@
+.itemDetail {
+  @include dark-block;
+  .productWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gridGap;
+    @include breakpoint-down(medium) {
+      display: flex;
+      flex-direction: column;
+      gap: $mediumSpacing;
+    }
+  }
+
+  .itemDetails {
+    text-align: left;
+  }
+
+  p {
+    margin-bottom: $mediumSpacing;
+  }
+  .price {
+    color: $accentLight;
+  }
+  .largerImage {
+    width: 100%;
+    min-width: 12.5rem;
+    max-width: 31.25rem;
+    height: auto;
+    border-radius: 1.875rem;
+    margin: auto;
+
+    @include breakpoint-down(medium) {
+      max-width: 18.75rem;
+    }
+  }
+}

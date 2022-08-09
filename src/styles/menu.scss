@@ -1,0 +1,43 @@
+.menu {
+  @include blue;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  .logo {
+    font-size: $subheadingFont;
+    line-height: 1;
+    color: $accentLight;
+    -webkit-text-stroke: 0.0625rem $dark;
+    @include heading;
+    @include breakpoint-down(small) {
+      font-size: $mobileSubheadingFont;
+    }
+  }
+
+  .floatRight {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    & > * {
+      margin: 0 $smallSpacing;
+      font-weight: bold;
+    }
+
+    .cartNumber {
+      background-color: $accentLight;
+      color: $dark;
+      border-radius: 0.3125rem;
+      padding: 0 $xSmallSpacing;
+      font-size: $smallFont;
+      margin-left: $smallSpacing;
+      @include breakpoint-down(small) {
+        font-size: $mobileSmallFont;
+        padding: 0 0.1875rem;
+      }
+    }
+  }
+}

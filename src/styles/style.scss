@@ -1,0 +1,146 @@
+@import "mixins";
+@import "variables";
+
+@import "menu", "home", "product-page", "item-detail", "cart", "checkout",
+  "footer";
+
+/* i should really move the ideas section somewhere else */
+/* search button */
+/* main button animation that grows and shrinks over time */
+/* shopping cart and checkout "thank you for your order, we will (probably) email you your tickets as confirmation"*/
+/* checkout funct with forms and crap uuuh */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+
+  /* Works on Firefox */
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: $accentDark $accentLight;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 0.9375rem;
+    height: 0.9375rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $accentLight;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accentDark;
+    border: $borderWidth solid $accentLight;
+  }
+}
+
+body {
+  @include dark-background;
+}
+
+.everything {
+  text-align: center;
+  padding: $largeSpacing $xLargeSpacing;
+  @include breakpoint-down(small) {
+    padding: $mediumSpacing $smallSpacing;
+  }
+  @include breakpoint-down(medium) {
+    padding: $mediumSpacing;
+  }
+}
+
+.everything,
+.menu,
+footer {
+  font-size: $mainFont;
+  @include breakpoint-down(small) {
+    font-size: $mobileMainFont;
+  }
+}
+
+.menu,
+footer {
+  padding: $smallSpacing $xLargeSpacing;
+  @include breakpoint-down(medium) {
+    padding: $smallSpacing $mediumSpacing;
+  }
+}
+
+p {
+  line-height: 1.6;
+  @include breakpoint-down(small) {
+    font-size: $mobileMainFont;
+  }
+}
+h1,
+h2,
+h3 {
+  @include heading;
+  font-weight: 500;
+  @include breakpoint-down(small) {
+    padding-bottom: $smallSpacing;
+  }
+}
+
+h1 {
+  -webkit-text-stroke: 0.0625rem $accentLight;
+  color: $dark;
+  padding-bottom: $mediumSpacing;
+  font-size: $headingFont;
+  @include breakpoint-down(small) {
+    font-size: $mobileHeadingFont;
+    padding-bottom: $smallSpacing;
+  }
+}
+
+button {
+  @include blue;
+  @include heading;
+  padding: $mediumSpacing;
+  font-size: $mainFont;
+  border: $borderWidth solid $accentLight;
+  transition: all $transitionTime ease-in-out;
+  border-color: $accentLight;
+  color: $accentLight;
+
+  &:hover {
+    background-color: darken($accentDark, 10%);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0.3125rem);
+  }
+}
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+/* .secondaryButton {
+  @include dark-background;
+  color: $accentLight;
+
+  &:hover {
+    background-color: $accentLight;
+    color: $dark;
+    border-color: $dark;
+  }
+} */
+
+.mainButton {
+  font-size: $subheadingFont;
+  padding: $mediumSpacing 1.875rem;
+  @include breakpoint-down(small) {
+    padding: $mediumSpacing;
+  }
+}
+
+.error {
+  @include dark-block;
+}

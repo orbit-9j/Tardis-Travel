@@ -1,0 +1,140 @@
+.home {
+  & > * {
+    @include dark-block;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: $largeSpacing;
+    @include breakpoint-down(small) {
+      margin-bottom: $mediumSpacing;
+    }
+  }
+
+  .stars {
+    font-size: 1.5625rem;
+  }
+  .author {
+    font-weight: bold;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $largeSpacing;
+
+    @include breakpoint-down(medium) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .left {
+      div > *:not(:last-child, p) {
+        margin-bottom: $mediumSpacing;
+        @include breakpoint-down(small) {
+          margin-bottom: $mediumSpacing;
+        }
+      }
+      @include center;
+    }
+
+    .title {
+      padding: 0;
+    }
+    .disclaimer {
+      color: $accentLight;
+      font-size: $smallFont;
+      @include breakpoint-down(small) {
+        font-size: $mobileSmallFont;
+      }
+    }
+
+    .rating {
+      @include dimmerCard;
+      @include center;
+      color: $accentLight;
+
+      & > p {
+        @include cardParams;
+        margin-bottom: 0;
+      }
+      @include breakpoint-down(small) {
+        flex-direction: column;
+      }
+    }
+
+    .rightImage {
+      object-fit: contain;
+      max-height: 40.625rem;
+      max-width: 100%;
+      margin: auto;
+      @include breakpoint-down(medium) {
+        margin-bottom: $mediumSpacing;
+        max-height: 18.75rem;
+      }
+    }
+  }
+
+  .ad {
+    background-color: $accentLight;
+    color: $dark;
+    padding-top: $mediumSpacing;
+    padding-bottom: $mediumSpacing;
+
+    h1 {
+      -webkit-text-stroke: 0;
+      padding: 0;
+    }
+    .sponsored {
+      margin: 0;
+      font-size: $smallFont;
+    }
+
+    .videos {
+      overflow-x: auto;
+      display: flex;
+      justify-content: center;
+      @include breakpoint-down(small) {
+        justify-content: left;
+      }
+      iframe {
+        margin: $smallSpacing;
+        width: 18.75rem;
+        height: 12.5rem;
+        filter: sepia(80%);
+        @include breakpoint-down(small) {
+          width: 11.25rem;
+          height: 6.25rem;
+        }
+      }
+      margin-bottom: mediumSpacing;
+    }
+  }
+
+  .testimonials {
+    .reviewWrapper {
+      overflow-x: auto;
+      display: flex;
+
+      .review {
+        min-width: 12.5rem;
+        margin: $smallSpacing;
+        @include cardParams;
+        margin-bottom: $mediumSpacing;
+        @include dimmerCard;
+        .reviewContent {
+          font-size: $smallFont;
+        }
+
+        .author,
+        .stars {
+          color: $accentLight;
+        }
+        p {
+          padding: $xSmallSpacing 0;
+        }
+      }
+    }
+  }
+  .card-collection {
+    margin-bottom: $mediumSpacing;
+  }
+}
