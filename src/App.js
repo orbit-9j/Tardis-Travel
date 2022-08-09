@@ -56,20 +56,24 @@ function App() {
         <Navbar cartItems={cartItems} />
         <div className="everything">
           <Routes>
-            <Route exact path="/" element={<Home items={items} />} />
             <Route
               exact
-              path="/products"
+              path="/Tardis-Travel"
+              element={<Home items={items} />}
+            />
+            <Route
+              exact
+              path="/Tardis-Travel/products"
               element={<ProductPage items={items} />}
             />
             <Route
-              path="/products/:id"
+              path="/Tardis-Travel/products/:id"
               element={
                 <ItemPage items={items} handleAddProduct={handleAddProduct} />
               }
             />
             <Route
-              path="/cart"
+              path="/Tardis-Travel/cart"
               element={
                 <Cart
                   items={items}
