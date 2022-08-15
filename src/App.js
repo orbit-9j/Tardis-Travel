@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./styles/style.css";
 import { useState } from "react";
 
@@ -52,7 +52,7 @@ function App() {
   };
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Navbar cartItems={cartItems} />
         <div className="everything">
           <Routes>
@@ -86,7 +86,7 @@ function App() {
         </div>
 
         <Footer />
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
